@@ -1,30 +1,33 @@
 # ATfinder
 
-ATfinder is a frozen multi-label ACP ranking model package for **five-fold independent evaluation**.  
-This repository provides the **model implementation**, **prepared dataset**, and **frozen checkpoints** used in the released experimental setting.
+**ATfinder** is a frozen multi-label learning framework for five-fold independent evaluation of anticancer peptide (ACP) cancer-type associations.
+
+This repository provides the model implementation, prepared dataset, fixed ESM-2 features, and frozen five-fold checkpoints used in the released experimental setting.
 
 <p align="center">
-  <img src="assets/acp.png" width="850" alt="ATfinder model architecture and workflow">
+  <img src="assets/acp.png" width="800" alt="ATfinder model architecture">
 </p>
 
 <p align="center">
-  <em>Figure 1. Overall architecture and workflow of ATfinder.</em>
+  <sub><b>Figure 1.</b> Overall architecture and workflow of ATfinder.</sub>
 </p>
-
----
 
 ## Overview
 
-This package is intended for **reproducible evaluation** of the ATfinder framework under a fixed experimental configuration.
+ATfinder integrates sequence semantic representations and physicochemical features with label-association modeling for multi-label ACP ranking.
 
-It includes:
+The framework consists of three main components:
 
-- the complete **ATfinder model code**
-- the prepared **multi-label ACP dataset**
-- **five-fold frozen checkpoints**
-- the training/evaluation entry point under the released setting
+1. **Cross-modal representation extraction**  
+   Combines pretrained ESM-2 sequence representations with physicochemical features through interaction fusion.
 
-The current release is designed for **five-fold independent ACP multi-label ranking**, rather than for arbitrary reconfiguration.
+2. **Prototype-guided label association learning**  
+   Models cancer-type relationships using prototype representations and a weighted label graph.
+
+3. **Multi-label PU learning**  
+   Handles unlabeled positives using the frozen non-negative PU learning objective and auxiliary ranking losses.
+
+The released package is intended to reproduce the frozen five-fold experimental configuration and the final independent evaluation.
 
 ---
 
