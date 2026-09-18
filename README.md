@@ -2,7 +2,10 @@
 
 Frozen ATfinder model and dataset for five-fold Independent ACP multi-label ranking.
 
+<img src="assets/acp.png" width="800" alt="ATfinder ACP model architecture">
+
 This package contains only the model code, the prepared dataset, and the frozen five-fold checkpoints.
+
 
 ## Contents
 
