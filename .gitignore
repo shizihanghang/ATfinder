@@ -1,0 +1,11 @@
+__pycache__/
+*.py[cod]
+.venv/
+.idea/
+.vscode/
+.DS_Store
+
+runs/
+*.pt
+*.pth
+!data/esm2_t30_150m_mean.pt
